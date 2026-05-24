@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SYO Services Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .contact-section { max-width: 1400px; margin: 100px auto 0; padding: 4rem 2rem; }
+        .contact-header { text-align: center; margin-bottom: 4rem; }
+        .contact-header h2 { font-size: 2.5rem; font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 1rem; }
+        .contact-content { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start; }
+        .contact-form { background: var(--color-white); padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark); }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 2px solid var(--color-light); border-radius: 5px; font-family: inherit; font-size: 1rem; transition: var(--transition); }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--color-primary); }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        .contact-info { }
+        .info-card { background: var(--color-light); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; }
+        .info-card i { font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .info-card h4 { color: var(--color-dark); margin-bottom: 0.5rem; font-family: var(--font-heading); }
+        .info-card p { color: var(--color-gray); margin: 0; }
+        .whatsapp-btn { background: #25D366; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition); margin-top: 1rem; text-decoration: none; }
+        .whatsapp-btn:hover { background: #20BA58; transform: translateY(-2px); }
+        @media (max-width: 768px) {
+            .contact-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER FIXE -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>SYO</span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="formations.html" class="nav-link">Formations</a>
+                <a href="apropos.html" class="nav-link">À propos</a>
+                <a href="communaute.html" class="nav-link">Communauté</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-community" onclick="redirectToCommunity()">Rejoindre</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-header" data-aos="fade-up">
+            <h2>Nous Contacter</h2>
+            <p style="font-size: 1.1rem; color: var(--color-gray); max-width: 600px; margin: 0 auto;">Vous avez une question ou besoin d'un devis? Contactez-nous dès maintenant. Notre équipe vous répondra dans les 24h.</p>
+        </div>
+
+        <div class="contact-content">
+            <!-- FORMULAIRE DE CONTACT -->
+            <form class="contact-form" id="contactForm" data-aos="fade-right">
+                <h3 style="margin-bottom: 1.5rem; color: var(--color-dark); font-family: var(--font-heading);">Envoyez-nous un Message</h3>
+                
+                <div class="form-group">
+                    <label for="name">Nom Complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Concerné</label>
+                    <select id="service" name="service" style="width: 100%; padding: 0.8rem; border: 2px solid var(--color-light); border-radius: 5px; font-family: inherit;">
+                        <option value="">Sélectionner un service</option>
+                        <option value="videosurveillance">Vidéosurveillance</option>
+                        <option value="cybersecurite">Cybersécurité</option>
+                        <option value="reseaux">Réseaux</option>
+                        <option value="maintenance">Maintenance IT</option>
+                        <option value="developpement">Développement Web</option>
+                        <option value="formation">Formation</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Envoyer le Message</button>
+            </form>
+
+            <!-- INFORMATIONS DE CONTACT -->
+            <div class="contact-info" data-aos="fade-left">
+                <h3 style="margin-bottom: 1.5rem; color: var(--color-dark); font-family: var(--font-heading);">Nos Coordonnées</h3>
+
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Adresse</h4>
+                    <p>Abidjan, Côte d'Ivoire<br>Zone 4, Cocody</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Téléphone</h4>
+                    <p>+225 XX XX XX XX<br>+225 YY YY YY YY</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>contact@syo-tech.ci<br>info@syo-tech.ci</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Horaires</h4>
+                    <p>Lun - Ven: 08:00 - 18:00<br>Sam: 09:00 - 13:00</p>
+                </div>
+
+                <a href="https://wa.me/225XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Business
+                </a>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white; border-radius: 10px;">
+                    <h4 style="margin-bottom: 0.5rem;"><i class="fas fa-headset"></i> Support Urgent</h4>
+                    <p style="margin: 0;">Disponible 24/7 pour les urgences cybers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SYO Services Technology</h4>
+                <p>L'innovation au service de votre sécurité digitale</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#surveillance">Vidéosurveillance</a></li>
+                    <li><a href="services.html#cybersecurite">Cybersécurité</a></li>
+                    <li><a href="services.html#reseaux">Réseaux</a></li>
+                    <li><a href="services.html#maintenance">Maintenance IT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+                <p><i class="fas fa-phone"></i> +225 XX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@syo-tech.ci</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SYO Services Technology. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                service: document.getElementById('service').value,
+                date: new Date().toISOString()
+            };
+
+            // Validation basique
+            if (!validateEmail(formData.email)) {
+                showToast('Veuillez entrer une adresse email valide');
+                return;
+            }
+
+            // Sauvegarder en localStorage
+            let contacts = JSON.parse(localStorage.getItem('contactMessages')) || [];
+            contacts.push(formData);
+            localStorage.setItem('contactMessages', JSON.stringify(contacts));
+
+            // Message de succès
+            showToast('Message envoyé avec succès! Nous vous contacterons bientôt.');
+            
+            // Réinitialiser le formulaire
+            this.reset();
+        });
+    </script>
+</body>
+</html>
