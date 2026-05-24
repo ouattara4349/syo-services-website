@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SYO Services Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .service-detail { max-width: 1400px; margin: 100px auto 0; padding: 4rem 2rem; }
+        .service-detail h2 { font-size: 2.5rem; font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 2rem; }
+        .service-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .feature-box { background: var(--color-white); border: 2px solid var(--color-light); padding: 2rem; border-radius: 10px; transition: var(--transition); }
+        .feature-box:hover { border-color: var(--color-primary); box-shadow: 0 10px 30px rgba(232, 70, 30, 0.15); }
+        .feature-box i { font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; }
+        .feature-box h4 { color: var(--color-dark); margin-bottom: 0.5rem; font-family: var(--font-heading); }
+        .feature-box p { color: var(--color-gray); }
+        .quote-btn { background: var(--color-primary); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: 600; transition: var(--transition); margin-top: 1rem; }
+        .quote-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(232, 70, 30, 0.3); }
+    </style>
+</head>
+<body>
+    <!-- HEADER FIXE -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>SYO</span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="formations.html" class="nav-link">Formations</a>
+                <a href="apropos.html" class="nav-link">À propos</a>
+                <a href="communaute.html" class="nav-link">Communauté</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-community" onclick="redirectToCommunity()">Rejoindre</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- VIDÉOSURVEILLANCE -->
+    <section class="service-detail" id="surveillance">
+        <h2><i class="fas fa-camera"></i> Vidéosurveillance & Sécurité Électronique</h2>
+        <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">Solutions complètes de surveillance haute définition avec technologie 4K, enregistrement intelligent et accès à distance en temps réel.</p>
+        
+        <div class="service-features">
+            <div class="feature-box">
+                <i class="fas fa-video"></i>
+                <h4>Caméras HD/4K</h4>
+                <p>Installation de caméras haute résolution avec vision nocturne infrarouge et zoom optique avancé.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-brain"></i>
+                <h4>Surveillance Intelligente</h4>
+                <p>Détection de mouvements intelligente, reconnaissance faciale et alertes en temps réel.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-phone"></i>
+                <h4>Accès Mobile</h4>
+                <p>Visualisez votre surveillance en direct depuis votre smartphone, tablette ou ordinateur.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-database"></i>
+                <h4>Enregistrement</h4>
+                <p>Stockage local et cloud sécurisé avec archivage automatique et récupération rapide des vidéos.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-cogs"></i>
+                <h4>Configuration DVR/NVR</h4>
+                <p>Installation et configuration professionnelle de systèmes d'enregistrement numériques.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-tools"></i>
+                <h4>Maintenance</h4>
+                <p>Support technique continu, mise à jour firmware et maintenance préventive de vos équipements.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CYBERSÉCURITÉ -->
+    <section class="service-detail" id="cybersecurite">
+        <h2><i class="fas fa-lock"></i> Cybersécurité & Protection des Données</h2>
+        <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">Protection complète contre les cyberattaques, audit de sécurité et sensibilisation de votre personnel.</p>
+        
+        <div class="service-features">
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Audit Sécurité</h4>
+                <p>Évaluation complète de votre infrastructure IT et identification des vulnérabilités critiques.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-bug"></i>
+                <h4>Protection Cyberattaques</h4>
+                <p>Firewall avancé, antivirus entreprise et systèmes de détection d'intrusion (IDS/IPS).</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-network-wired"></i>
+                <h4>Sécurisation Réseaux</h4>
+                <p>Segmentation réseau, chiffrement VPN et configuration de zones démilitarisées (DMZ).</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h4>Surveillance Vulnérabilités</h4>
+                <p>Scan régulier des failles de sécurité et rapports d'exposition détaillés avec recommandations.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Sensibilisation</h4>
+                <p>Formation continue de votre équipe contre les techniques de phishing et ingénierie sociale.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-file-contract"></i>
+                <h4>Conformité RGPD</h4>
+                <p>Mise en conformité avec les réglementations de protection des données internationales.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉSEAUX & TELECOM -->
+    <section class="service-detail" id="reseaux">
+        <h2><i class="fas fa-network-wired"></i> Réseaux & Télécommunications</h2>
+        <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">Solutions réseau performantes, fiables et sécurisées pour votre infrastructure IT professionnelle.</p>
+        
+        <div class="service-features">
+            <div class="feature-box">
+                <i class="fas fa-cable"></i>
+                <h4>Câblage Structuré</h4>
+                <p>Installation de câblage Cat6/Cat7 avec normes internationales et documentation complète.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-wifi"></i>
+                <h4>Wi-Fi Professionnel</h4>
+                <p>Déploiement de réseaux Wi-Fi 6 haute performance avec sécurité WPA3 entreprise.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-microchip"></i>
+                <h4>Switchs & Routeurs</h4>
+                <p>Configuration de commutateurs gérés et routeurs d'entreprise avec redondance.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-server"></i>
+                <h4>Administration Réseau</h4>
+                <p>Gestion complète de vos ressources réseau, VPN et accès à distance sécurisé.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-tachometer-alt"></i>
+                <h4>Optimisation Internet</h4>
+                <p>Audit de bande passante, Load Balancing et optimisation de flux de données.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-phone-alt"></i>
+                <h4>VoIP & Téléphonie</h4>
+                <p>Systèmes de téléphonie IP avec standardiste virtuel et enregistrement d'appels.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAINTENANCE IT -->
+    <section class="service-detail" id="maintenance">
+        <h2><i class="fas fa-tools"></i> Maintenance Informatique</h2>
+        <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">Services de maintenance complèts pour garantir le bon fonctionnement de votre infrastructure IT.</p>
+        
+        <div class="service-features">
+            <div class="feature-box">
+                <i class="fas fa-wrench"></i>
+                <h4>Dépannage Urgent</h4>
+                <p>Support technique 24/7 pour résoudre rapidement vos problèmes informatiques.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-heart"></i>
+                <h4>Maintenance Préventive</h4>
+                <p>Contrôles réguliers et mises à jour pour prévenir les dysfonctionnements.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-file-medical"></i>
+                <h4>Maintenance Corrective</h4>
+                <p>Diagnostic et réparation rapide de vos équipements défectueux ou endommagés.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h4>Gestion de Parc</h4>
+                <p>Inventaire complet, suivi des licences et planification des remplacements d'équipements.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-compact-disc"></i>
+                <h4>Installation OS/Logiciels</h4>
+                <p>Installation et configuration de systèmes d'exploitation et applications métier.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-save"></i>
+                <h4>Sauvegarde Données</h4>
+                <p>Systèmes de sauvegarde automatisés, récupération et archivage sécurisés.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DÉVELOPPEMENT WEB -->
+    <section class="service-detail" id="developpement">
+        <h2><i class="fas fa-globe"></i> Développement & Solutions Digitales</h2>
+        <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">Solutions web et digitales innovantes pour renforcer votre présence en ligne.</p>
+        
+        <div class="service-features">
+            <div class="feature-box">
+                <i class="fas fa-globe"></i>
+                <h4>Sites Web Pro</h4>
+                <p>Création de sites web modernes, responsive et optimisés pour les moteurs de recherche.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-code"></i>
+                <h4>Applications Web</h4>
+                <p>Développement d'applications web sur mesure avec technologies actuelles (React, Vue, Laravel).</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>Apps Mobiles</h4>
+                <p>Applications mobiles iOS et Android natives ou cross-platform performantes.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-palette"></i>
+                <h4>Design & Branding</h4>
+                <p>Création de logo, charte graphique et design d'interface utilisateur professionnel.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-file-pdf"></i>
+                <h4>Supports Marketing</h4>
+                <p>Design d'affiches, flyers, brochures et supports visuels pour votre communication.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-share-alt"></i>
+                <h4>Réseaux Sociaux</h4>
+                <p>Gestion complète de vos réseaux sociaux, création de contenu et stratégie digitale.</p>
+                <button class="quote-btn">Demander un devis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SYO Services Technology</h4>
+                <p>L'innovation au service de votre sécurité digitale</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#surveillance">Vidéosurveillance</a></li>
+                    <li><a href="#cybersecurite">Cybersécurité</a></li>
+                    <li><a href="#reseaux">Réseaux</a></li>
+                    <li><a href="#maintenance">Maintenance IT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+                <p><i class="fas fa-phone"></i> +225 XX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@syo-tech.ci</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SYO Services Technology. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
