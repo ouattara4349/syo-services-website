@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYO Services Technology - Cybersécurité & Solutions Digitales</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER FIXE -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>SYO</span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="formations.html" class="nav-link">Formations</a>
+                <a href="apropos.html" class="nav-link">À propos</a>
+                <a href="communaute.html" class="nav-link">Communauté</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-community" onclick="redirectToCommunity()">Rejoindre</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>L'innovation au service de votre sécurité digitale</h1>
+            <p>Solutions complètes en cybersécurité, réseaux, maintenance informatique et vidéosurveillance</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn btn-primary">Nos Services</a>
+                <a href="contact.html" class="btn btn-secondary">Nous Contacter</a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+            <div class="hero-circle"></div>
+            <i class="fas fa-shield-alt"></i>
+        </div>
+    </section>
+
+    <!-- STATISTIQUES -->
+    <section class="stats" data-aos="fade-up">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Clients Satisfaits</p>
+            </div>
+            <div class="stat-card">
+                <h3>1000+</h3>
+                <p>Projets Réalisés</p>
+            </div>
+            <div class="stat-card">
+                <h3>10+</h3>
+                <p>Années d'Expérience</p>
+            </div>
+            <div class="stat-card">
+                <h3>5000+</h3>
+                <p>Formations Dispensées</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES APERÇU -->
+    <section class="services-preview">
+        <h2 data-aos="fade-up">Nos Services Experts</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h3>Vidéosurveillance</h3>
+                <p>Caméras HD/4K, surveillance intelligente et accès à distance</p>
+                <a href="services.html#surveillance">En savoir plus →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Cybersécurité</h3>
+                <p>Audit sécurité, protection contre les cyberattaques</p>
+                <a href="services.html#cybersecurite">En savoir plus →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Réseaux & Telecom</h3>
+                <p>Câblage structuré, Wi-Fi Pro, administration réseau</p>
+                <a href="services.html#reseaux">En savoir plus →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance IT</h3>
+                <p>Dépannage, maintenance préventive et gestion de parc</p>
+                <a href="services.html#maintenance">En savoir plus →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Développement Web</h3>
+                <p>Sites web pro, applications web et solutions digitales</p>
+                <a href="services.html#developpement">En savoir plus →</a>
+            </div>
+
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Formation</h3>
+                <p>Formations informatique et cybersécurité</p>
+                <a href="formations.html">En savoir plus →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI NOUS -->
+    <section class="why-us" data-aos="fade-up">
+        <h2>Pourquoi Choisir SYO?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fas fa-star"></i>
+                <h4>Expertise Reconnue</h4>
+                <p>Équipe d'ingénieurs et techniciens certifiés avec plus de 10 ans d'expérience</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-bolt"></i>
+                <h4>Réactivité</h4>
+                <p>Support rapide et intervention dans les 24h</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Proximité</h4>
+                <p>Basés à Abidjan, proches de nos clients locaux</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-rocket"></i>
+                <h4>Innovation</h4>
+                <p>Solutions technologiques à la pointe du marché</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="testimonials" data-aos="fade-up">
+        <h2>Nos Clients Parlent de Nous</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"SYO a transformé notre infrastructure IT. Service professionnel et équipe très compétente!"</p>
+                <h4>Jean Dupont</h4>
+                <span>Directeur IT, Entreprise X</span>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"La formation cybersécurité était excellente. Formateurs très pédagogues et contenus actualisés."</p>
+                <h4>Marie Martin</h4>
+                <span>Responsable Sécurité, Banque Y</span>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Solution vidéosurveillance performante et support irréprochable. Recommandé!"</p>
+                <h4>Ahmed Sow</h4>
+                <span>Gérant, Commerce Z</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" data-aos="fade-up">
+        <h2>Prêt à Transformer Votre Sécurité Digitale?</h2>
+        <p>Rejoignez nos 500+ clients satisfaits</p>
+        <div class="cta-buttons">
+            <button class="btn btn-primary" onclick="redirectToCommunity()">Rejoindre la Communauté</button>
+            <a href="contact.html" class="btn btn-secondary">Demander un Devis</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SYO Services Technology</h4>
+                <p>L'innovation au service de votre sécurité digitale</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#surveillance">Vidéosurveillance</a></li>
+                    <li><a href="services.html#cybersecurite">Cybersécurité</a></li>
+                    <li><a href="services.html#reseaux">Réseaux</a></li>
+                    <li><a href="services.html#maintenance">Maintenance IT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+                <p><i class="fas fa-phone"></i> +225 XX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@syo-tech.ci</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SYO Services Technology. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
