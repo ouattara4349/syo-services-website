@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - SYO Services Technology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-section { max-width: 1400px; margin: 100px auto 0; padding: 4rem 2rem; }
+        .about-intro { text-align: center; margin-bottom: 4rem; }
+        .about-intro h2 { font-size: 2.5rem; font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 1rem; }
+        .about-intro p { font-size: 1.1rem; color: var(--color-gray); max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        .mission-values { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 4rem 0; align-items: center; }
+        .mission-text h3 { font-size: 1.8rem; font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 1rem; }
+        .mission-text p { color: var(--color-gray); margin-bottom: 1rem; line-height: 1.8; }
+        .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .value-item { padding: 1.5rem; background: var(--color-light); border-radius: 10px; }
+        .value-item i { font-size: 2rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+        .value-item h4 { color: var(--color-dark); margin-bottom: 0.5rem; font-family: var(--font-heading); }
+        .team-section { margin: 4rem 0; }
+        .team-section h2 { font-size: 2rem; font-family: var(--font-heading); color: var(--color-dark); text-align: center; margin-bottom: 3rem; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .team-card { background: var(--color-white); border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); transition: var(--transition); }
+        .team-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(232, 70, 30, 0.15); }
+        .team-avatar { width: 100%; height: 250px; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display: flex; align-items: center; justify-content: center; }
+        .team-avatar i { font-size: 100px; color: rgba(255, 255, 255, 0.3); }
+        .team-info { padding: 1.5rem; }
+        .team-info h3 { font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 0.3rem; }
+        .team-info p { color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem; }
+        .team-info span { color: var(--color-gray); font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .mission-values { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER FIXE -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i>
+                <span>SYO</span>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="formations.html" class="nav-link">Formations</a>
+                <a href="apropos.html" class="nav-link active">À propos</a>
+                <a href="communaute.html" class="nav-link">Communauté</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-community" onclick="redirectToCommunity()">Rejoindre</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT INTRO -->
+    <section class="about-section">
+        <div class="about-intro" data-aos="fade-up">
+            <h2>À Propos de SYO Services Technology</h2>
+            <p>Depuis plus de 10 ans, SYO Services Technology accompagne les entreprises ivoiriennes dans leur transformation digitale et sécurité informatique. Notre mission : rendre la technologie accessible, sûre et innovante pour tous.</p>
+        </div>
+
+        <!-- MISSION & VALEURS -->
+        <div class="mission-values" data-aos="fade-up">
+            <div class="mission-text">
+                <h3>Notre Mission</h3>
+                <p>Fournir des solutions technologiques innovantes et sécurisées qui permettent aux entreprises de prospérer dans l'ère numérique.</p>
+                <p>Nous croyons que la cybersécurité et la digitalisation ne sont pas des luxes, mais des nécessités pour la survie et la croissance des organisations modernes.</p>
+                <p><strong>Slogan :</strong> "L'innovation au service de votre sécurité digitale"</p>
+            </div>
+            <div>
+                <h3 style="text-align: center; margin-bottom: 1.5rem; font-family: var(--font-heading); color: var(--color-dark);">Nos Valeurs</h3>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovation</h4>
+                        <p>Nous adoptons les dernières technologies et méthodologies.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Confiance</h4>
+                        <p>Transparence et intégrité en toutes circonstances.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Proximité</h4>
+                        <p>Support local et réactif dans votre région.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-star"></i>
+                        <h4>Excellence</h4>
+                        <p>Qualité et professionnalisme garantis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE -->
+    <section class="about-section">
+        <div class="team-section" data-aos="fade-up">
+            <h2>Notre Équipe d'Experts</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ouattara Yacouba Stéphane</h3>
+                        <p>CEO & Fondateur</p>
+                        <span><i class="fas fa-briefcase"></i> Ingénieur en Cybersécurité</span>
+                        <p style="color: var(--color-gray); margin-top: 0.8rem; font-size: 0.9rem;">Leadership visionnaire, expertise en cybersécurité et stratégie digitale. Plus de 10 ans d'expérience.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Kacou Emmanuel</h3>
+                        <p>Développeur Web & Mobile</p>
+                        <span><i class="fas fa-code"></i> Full-Stack Developer</span>
+                        <p style="color: var(--color-gray); margin-top: 0.8rem; font-size: 0.9rem;">Spécialisé en développement web et applications mobiles. Expert React, Vue et Node.js.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ramdé Daouda</h3>
+                        <p>Technicien Systèmes</p>
+                        <span><i class="fas fa-microchip"></i> Systèmes Électroniques</span>
+                        <p style="color: var(--color-gray); margin-top: 0.8rem; font-size: 0.9rem;">Expert en infrastructure réseau, serveurs et administration système Linux/Windows.</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Touré Alassane</h3>
+                        <p>Technicien Vidéosurveillance</p>
+                        <span><i class="fas fa-cctv"></i> Électronique & Surveillance</span>
+                        <p style="color: var(--color-gray); margin-top: 0.8rem; font-size: 0.9rem;">Spécialiste en installation et configuration de systèmes de vidéosurveillance HD/4K.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="about-section" data-aos="fade-up">
+        <h2 style="text-align: center; font-size: 2rem; font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 2rem;">Certifications & Partenaires</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+            <div style="padding: 2rem; background: var(--color-light); border-radius: 10px;">
+                <i class="fas fa-certificate" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--color-dark); margin-bottom: 0.5rem;">ISO 27001</h4>
+                <p style="color: var(--color-gray); font-size: 0.9rem;">Gestion de la sécurité de l'information</p>
+            </div>
+            <div style="padding: 2rem; background: var(--color-light); border-radius: 10px;">
+                <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--color-dark); margin-bottom: 0.5rem;">Cisco Certified</h4>
+                <p style="color: var(--color-gray); font-size: 0.9rem;">Réseau et Infrastructure</p>
+            </div>
+            <div style="padding: 2rem; background: var(--color-light); border-radius: 10px;">
+                <i class="fas fa-lock" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--color-dark); margin-bottom: 0.5rem;">CompTIA Security+</h4>
+                <p style="color: var(--color-gray); font-size: 0.9rem;">Sécurité Informatique</p>
+            </div>
+            <div style="padding: 2rem; background: var(--color-light); border-radius: 10px;">
+                <i class="fas fa-linux" style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--color-dark); margin-bottom: 0.5rem;">Linux Foundation</h4>
+                <p style="color: var(--color-gray); font-size: 0.9rem;">Administration Linux</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SYO Services Technology</h4>
+                <p>L'innovation au service de votre sécurité digitale</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#surveillance">Vidéosurveillance</a></li>
+                    <li><a href="services.html#cybersecurite">Cybersécurité</a></li>
+                    <li><a href="services.html#reseaux">Réseaux</a></li>
+                    <li><a href="services.html#maintenance">Maintenance IT</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Abidjan, Côte d'Ivoire</p>
+                <p><i class="fas fa-phone"></i> +225 XX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@syo-tech.ci</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SYO Services Technology. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
